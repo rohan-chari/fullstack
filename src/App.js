@@ -351,10 +351,8 @@ const App = () => {
 
   return (
     <div>
-        <Course course={course} />
-        {course.map(parts =>
-          <li key ={parts.id}>{parts.name}</li>
-          )}
+      <h1>hi</h1>
+        <Course course={course}/>
     </div>
 
   )

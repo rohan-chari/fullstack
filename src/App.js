@@ -1,6 +1,8 @@
 //imports
 import { useState } from 'react'
-import Notes from './components/Note'
+import Parts from './components/Parts'
+import Title from './components/Title'
+import Sum from './components/Sum'
 
 
 
@@ -291,64 +293,18 @@ const App = () => {
 
 ANECDOTE EXERCISE*/
 
-const Header = (props) => {
-  return(
-    <h1>{props.title}</h1>
-  )
-}
 
 
-const Names = ({course}) => {
-  {course.map(names =>
-    <p>{names.parts.name}</p>
-    )}
-}
-
-
-const Content = ({course}) => {
-  return(
-    <div>
-
-    </div>
-  )
-}
-
-const Course = ({course}) => {
-  return(
-    <div>
-      <Header title='Half Stack Application Development'/>
-    </div>
-    
-  )
-}
-
-const App = () => {
-  const course = {
-    id: 1,
-    name: 'Half Stack application development',
-    parts: [
-      {
-        name: 'Fundamentals of React',
-        exercises: 10,
-        id: 1
-      },
-      {
-        name: 'Using props to pass data',
-        exercises: 7,
-        id: 2
-      },
-      {
-        name: 'State of a component',
-        exercises: 14,
-        id: 3
-      }
-    ]
-  }
-
+const App = ({course}) => {
+  
   return (
     <div>
-      <h1>hi</h1>
-        <Course course={course}/>
+      <ul>
+        <Title content = 'Half Stack Application Development'/>
+        <Parts course={course}/>
+        <Sum course={course}/>
+      </ul>
+      
     </div>
 
   )

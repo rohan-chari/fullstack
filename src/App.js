@@ -1,8 +1,7 @@
 //imports
 import { useState } from 'react'
-import Parts from './components/Parts'
-import Title from './components/Title'
-import Sum from './components/Sum'
+import Courses from './components/Courses'
+
 
 
 
@@ -300,11 +299,8 @@ const App = ({course}) => {
   return (
     <div>
       <ul>
-        <Title content = 'Half Stack Application Development'/>
-        <Parts course={course}/>
-        <Sum course={course}/>
+        <Courses course = {course}/>
       </ul>
-      
     </div>
 
   )

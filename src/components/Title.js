@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Title = (props) => {
+const Title = ({course}) => {
   return (
-    <h1>{props.content}</h1>
+    <div>
+      {course.map((courseName,i) => <h1 key = {i}>{courseName.name}</h1>)}
+    </div>
+    
   )
 }
-
-
 
 export default Title
